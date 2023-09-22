@@ -29,6 +29,6 @@ jobs:
       name: Deploy to AWS
         uses: actions/aws-cli@v3
         with:
-          aws-access-key-id: your-aws-access-key-id
-          aws-secret-access-key: your-aws-secret-access-key
+          aws-access-key-id: AKIAQMO6TRMYR362S2UO
+          aws-secret-access-key: p9W54+erRFoxM+pyZ/lsEalSRHEjvJoW+r2YB3fd
           region: us-east-1
