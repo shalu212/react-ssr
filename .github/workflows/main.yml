@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Set Python Version
+        run: echo "python=/usr/bin/python2.7" >> $GITHUB_WORKSPACE/.npmrc
+
       - name: Install Dependencies
         run: npm install
 
@@ -37,4 +40,3 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap_southeast_2
           aws-cli-version: 2.x
-
