@@ -2,9 +2,11 @@ name: CI/CD
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   build:
@@ -26,10 +28,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd react-ssr
           npm ci
-          npm install
         # Navigate to your project's directory (replace with the actual path)
-        working-directory: https://github.com/shalu212/react-ssr/tree/master
 
       - name: Run the tests and generate coverage report
         run: npm test -- --coverage
