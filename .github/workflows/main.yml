@@ -13,18 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set working directory
+        run: cd package-lock.json  # Replace with the path to your desired directory
+        working-directory: cd package-lock.json
+
       - name: Install and Run Actions
         uses: actions/setup-node@v2
         with:
           node-version: 18.x
-
-      - name: Set Python 2.7
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python2.7
-          sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
-          python --version
-          echo 'PYTHON=python2.7' >> $GITHUB_ENV
 
       - name: Install Dependencies
         run: npm install
@@ -37,6 +33,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Set working directory
+        run: cd path/to/your/directory  # Replace with the path to your desired directory
+        working-directory: path/to/your/directory
 
       - name: Deploy to AWS
         uses: actions/aws/cli@v2
