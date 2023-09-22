@@ -11,16 +11,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set working directory
-        run: cd package-lock.json  # Replace with the path to your desired directory
-        working-directory: cd package-lock.json
+        uses: actions/checkout@v3
 
       - name: Install and Run Actions
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cache-dependency-path: package-lock.json
 
       - name: Install Dependencies
         run: npm install
@@ -32,14 +29,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set working directory
-        run: cd path/to/your/directory  # Replace with the path to your desired directory
-        working-directory: path/to/your/directory
+        uses: actions/checkout@v3
 
       - name: Deploy to AWS
-        uses: actions/aws/cli@v2
+        uses: actions/aws-cli@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
