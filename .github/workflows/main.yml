@@ -33,8 +33,8 @@ jobs:
       - name: Deploy to AWS
         uses: actions/aws/cli@v2
         with:
-          aws-access-key-id: ${{ AKIAQMO6TRMYR362S2UO }}
-          aws-secret-access-key: ${{ p9W54+erRFoxM+pyZ/lsEalSRHEjvJoW+r2YB3fd }}
-          aws-region: us-east-1  # Change to your desired AWS region
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap_southeast_2
           aws-cli-version: 2.x
 
