@@ -18,8 +18,13 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Set Python Version
-        run: echo "python=/usr/bin/python2.7" >> $GITHUB_WORKSPACE/.npmrc
+      - name: Set Python 2.7
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python2.7
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+          python --version
+          echo 'PYTHON=python2.7' >> $GITHUB_ENV
 
       - name: Install Dependencies
         run: npm install
