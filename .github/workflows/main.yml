@@ -29,7 +29,7 @@ jobs:
           npm ci
           npm install
         # Navigate to your project's directory (replace with the actual path)
-        working-directory: package.json
+        working-directory: https://github.com/shalu212/react-ssr/blob/b73ed8f5dacb3120a7ba637f7e0dd62727be33e9/package.json
 
       - name: Run the tests and generate coverage report
         run: npm test -- --coverage
