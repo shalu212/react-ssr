@@ -28,8 +28,8 @@ jobs:
         run: |
           npm ci
           npm install
-        # Navigate to your project's directory (if it's not the root of your repository)
-        working-directory: ./path/to/your/project
+        # Navigate to your project's directory (replace with the actual path)
+        working-directory: package.json
 
       - name: Run the tests and generate coverage report
         run: npm test -- --coverage
