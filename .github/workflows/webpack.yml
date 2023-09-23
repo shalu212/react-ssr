@@ -23,8 +23,7 @@ jobs:
 
     - name: Build
       run: |
-        npm install node-sass
-        npm install
+        npm install -g npm@latest
         npm ci
         npm start
         npx webpack
