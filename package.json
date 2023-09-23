@@ -12,13 +12,10 @@
     "bundlesize": "bundlesize",
     "precommit": "eslint src --quiet"
   },
-
-   "engines": { 
-   "node": ">=14.0.0 <18.0.0" 
- }, 
+ 
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "react": "^16.0.0",
+    "react": "^18.2.0",
     "react-dom": "^16.0.0",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
